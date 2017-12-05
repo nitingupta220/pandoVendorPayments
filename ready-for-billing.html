@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Admin</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/fonts/fonts.min.css" rel="stylesheet">
+        
+      <!-- Date Picker -->  
+        <link href="css/daterangepicker.css" rel="stylesheet">
+        
+ 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+  </head>
+  <body>
+  
+ <div class="container-fluid ready_billing">
+    
+       <div class="side_menu">
+         <header class="navbar navbar-fixed-top navbar-inverse">
+        <div class="navbar-header">
+          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="side-collapse in">
+    <nav role="navigation" class=" dot-slide sidebar navbar-minimal" id="style-1">
+    <ul class="nav navbar-nav navbar-menu">
+    <li><a href="index.html"><span class="menu_img "><img  src="images/logo.png" class="img-responsive" alt="logo"></span> </a></li>
+    <li><a href="index.html" class="active"><span class="menu_img "><img  src="images/menu/menu_1.png" class="img-responsive" alt="menu_1"></span> </a></li>
+     <li><a href="ready-for-billing.html" class="animate" ><div class="menu_img "><img src="images/menu/menu_2.png" class="img-responsive" alt="menu_2"></div></a></li>
+    <li><a href="billing.html" class="animate"><div class="menu_img"><img src="images/menu/menu_3.png" class="img-responsive" alt="menu_3"></div></a></li>
+     <li><a href="contratcs-accordian.html" class="animate"><div class="menu_img"><img src="images/menu/menu_4.png" class="img-responsive" alt="menu_4"></div></a></li>
+    <li><a href="invoice-details.html" class="animate" ><div class="menu_img "><img src="images/menu/menu_5.png" class="img-responsive" alt="menu_5"></div></a></li>
+    <li><a href="invoice-final-step.html" class="animate"><div class="menu_img"><img src="images/menu/menu_6.png" class="img-responsive" alt="menu_6"></div></a></li>
+    <li><a href="invoice-raised.html" class="animate" ><div class="menu_img "><img src="images/menu/menu_7.png" class="img-responsive" alt="menu_7"></div></a></li>
+     <li><a href="manage-orders-assign-truck.html" class="animate" ><div class="menu_img "><img src="images/menu/menu_2.png" class="img-responsive" alt="menu_2"></div></a></li>
+    <li><a href="manage-orders-dispached-drop-down.html" class="animate"><div class="menu_img"><img src="images/menu/menu_3.png" class="img-responsive" alt="menu_3"></div></a></li>
+    </ul>
+   </nav>
+   </div>
+ </header>       
+ </div>  
+        
+ <div class="main side-collapse-container"> 
+ <div class="clearfix"></div> 
+   <div class="side_padding"> 
+   <div class="top_header mynav navbar navbar-fixed-top">
+    
+   <div class="col-lg-12 billing_header ">
+  
+    <div class="col-lg-5 col-md-3 col-sm-4 col-xs-12 no-padding">
+     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 search_box">
+        
+ <div class="input-group">
+  <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
+  <input type="text" class="form-control"  aria-describedby="sizing-addon2">
+</div>
+ </div>
+     </div>
+                       
+       <div class="col-lg-7 col-md-9 col-sm-8 col-xs-12 ">
+      <div class="col-lg-5 col-md-4 col-sm-6 col-xs-6 pull-right equal_padding">      
+      
+      <div class="data_picker">
+      <p class="right_title">Date</p>
+       <input type="text" class="date_style date_picker_section bg_input_image" name="daterange" value="01/01/2017 - 01/31/2017" />
+       </div>
+        </div>
+       
+      <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 pull-right equal_padding">   
+      <p class="right_title">Client Name</p>                 
+        <div class="selectholder">
+        <label>Philips Lighting</label>
+        <select name="Philips Lighting" id="Philips Lighting">
+        <option value="0">Philips Lighting</option>
+         <option value="Philips Lighting">Philips Lighting</option>
+        <option value="Orient Electrices">Orient Electrices</option>
+        </select>
+        </div>
+    </div>
+       </div>                      
+   </div>
+   
+   </div>
+   
+  </div>
+  
+  <div class="clearfix"></div>
+  
+   <div class="table_style table-responsive order_details list_table_section billing_section scroll_page_large">  
+  <div class="table_section order_details_header_fixed"> 
+  <div class="side_padding">       
+  <table class="table table-striped billing_table billing_table_spacing ">
+    <thead class="billing_head">
+      <tr>
+       <th>
+        <label class="custom-checkbox"><input type="checkbox" ng-change="toggleAll(isAllSelected,filteredItems)" ng-model="isAllSelected" value="N" class="ng-pristine ng-untouched ng-valid">
+	<span class="checkbox"></span>
+	</label>
+        <div class="table_heading">Order ID</div></th>
+        <th><div class="table_heading">Date</div></th>
+        <th><div class="table_heading">Route</div></th>
+        <th><div class="table_heading">Consignee</div></th>
+        <th><div class="table_heading">LR Number</div></th>
+        <th><div class="table_heading">Vehicle Number</div></th>
+        <th><div class="table_heading">Vehicle Type</div></th>
+        <th><div class="table_heading right_side_text">Order Amount</div></th>
+      </tr>
+    </thead>
+    <tbody class="billing_body sp_tr">
+      <!-- ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="880" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-201
+        </label></td>
+        <td class="ng-binding">22 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Orient Elelctricals &amp;,Engineering (I) Pvt Ltd
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85170/21.10.2017/SPS/TN20AR1462
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 20 AR 1462</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="913" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-228
+        </label></td>
+        <td class="ng-binding">21 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Led'S World
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85175/21.10.2017/SPS/TN04Q0302
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 04 Q 0302</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="907" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-222
+        </label></td>
+        <td class="ng-binding">20 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 --><div id="myPopoverlist2" ng-if="bitem.consignee_list.length > 1" class="hide text_popover pull-right ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">Southern Electricals</li><!-- end ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">Sangam Distributors</li><!-- end ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">Nerelge Corporation</li><!-- end ngRepeat: citem in bitem.consignee_list -->
+	</ul>
+</div><!-- end ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Southern Electricals
+        <!-- ngIf: bitem.consignee_list.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.consignee_list.length > 1"> 
+            
+            <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopoverlist2" data-placement="bottom" class="popover_test consignee_readyfor_billing ng-binding" data-original-title="" title=""> + 3 </a></span><!-- end ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85146/20.10.2017/sps/tn18ak2790
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AK 2790</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="908" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-223
+        </label></td>
+        <td class="ng-binding">20 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 --><div id="myPopoverlist3" ng-if="bitem.consignee_list.length > 1" class="hide text_popover pull-right ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">S.G. Marketing</li><!-- end ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">Nerelge Corporation</li><!-- end ngRepeat: citem in bitem.consignee_list -->
+	</ul>
+</div><!-- end ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">S.G. Marketing
+        <!-- ngIf: bitem.consignee_list.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.consignee_list.length > 1"> 
+            
+            <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopoverlist3" data-placement="bottom" class="popover_test consignee_readyfor_billing ng-binding" data-original-title="" title=""> + 2 </a></span><!-- end ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85147/19.10.2017/sps/TN18AE4890
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AE 4890</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="878" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-199
+        </label></td>
+        <td class="ng-binding">19 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">SOUTHERN ELECTRICALS
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85136/19.10.2017/SPS/TN20AR1462
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 20 AR 1462</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="877" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-198
+        </label></td>
+        <td class="ng-binding">17 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">MAHAVEER ELECTRIC AGENCIES
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85129/17.10.2017/SPS/TN18AE4980
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AE 4980</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="881" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-202
+        </label></td>
+        <td class="ng-binding">17 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Midas Electricals Private Limited
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85135/17.10.2017/SPS/TN18M5790
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 M 5790</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="890" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-211
+        </label></td>
+        <td class="ng-binding">15 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">JAIN INTERNATIONAL
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85075/14.10.2017/sps/tn18ak3084
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AK 3084</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="897" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-218
+        </label></td>
+        <td class="ng-binding">15 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Teegee Agencies
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84080/14.10.2017/SPS/TN18K5854
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 K 5854</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="886" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-207
+        </label></td>
+        <td class="ng-binding">14 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Harsha Agencies
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85076/14.10.2017/SPS/TN18M6921
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 M 6921</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="891" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-212
+        </label></td>
+        <td class="ng-binding">14 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Teegee Agencies
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84985/13.10.2017/SPS/TN18M5765
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 M 5765</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="883" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-204
+        </label></td>
+        <td class="ng-binding">13 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Jain International
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84971/12.10.2017/SPS/TN01AD2334
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 01 AD 2334</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="884" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-205
+        </label></td>
+        <td class="ng-binding">13 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Visva Marketing
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84972/12.10.2017/SPS/TN18 7809
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 0 7809</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="885" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-206
+        </label></td>
+        <td class="ng-binding">13 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">N.A.Traders
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">85064/SPS/TN20AR1462/13.10.2017
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 20 AR 1462</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="887" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-208
+        </label></td>
+        <td class="ng-binding">13 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Visva Marketing
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84968/12.10.2017/SPS/TN18M6921
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 M 6921</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="910" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-225
+        </label></td>
+        <td class="ng-binding">13 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 --><div id="myPopoverlist15" ng-if="bitem.consignee_list.length > 1" class="hide text_popover pull-right ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">LED'S WORLD</li><!-- end ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">MAHAVEER ELECTRIC AGENCIES</li><!-- end ngRepeat: citem in bitem.consignee_list -->
+	</ul>
+</div><!-- end ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 --><div id="myPopovernumber15" ng-if="bitem.lr_nos.length > 1" class="hide number_popover ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: litem in bitem.lr_nos --><li ng-repeat="litem in bitem.lr_nos" class="ng-binding ng-scope">84969/12.10.2017/SPS/TN20AR1462</li><!-- end ngRepeat: litem in bitem.lr_nos --><li ng-repeat="litem in bitem.lr_nos" class="ng-binding ng-scope">84970/12.10.2017/SPS/TN20AR1462</li><!-- end ngRepeat: litem in bitem.lr_nos -->
+	</ul>
+</div><!-- end ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">LED'S WORLD
+        <!-- ngIf: bitem.consignee_list.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.consignee_list.length > 1"> 
+            
+            <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopoverlist15" data-placement="bottom" class="popover_test consignee_readyfor_billing ng-binding" data-original-title="" title=""> + 2 </a></span><!-- end ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84969/12.10.2017/SPS/TN20AR1462
+          <!-- ngIf: bitem.lr_nos.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.lr_nos.length > 1"> 
+              <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopovernumber15" data-placement="bottom" class="popover_test ng-binding" data-original-title="" title=""> + 2 </a></span><!-- end ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 20 AR 1462</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="911" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-226
+        </label></td>
+        <td class="ng-binding">13 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Skt Enterprises
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84966/SPS/12.10.2017/TN18AK3084
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AK 3084</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="892" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-213
+        </label></td>
+        <td class="ng-binding">12 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">SOUTHERN ELECTRICALS
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84951/11.10.2017
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 M 6921</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="893" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-214
+        </label></td>
+        <td class="ng-binding">12 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Teegee Agencies
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84950/11.10.2017/spsTN18AK3084
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AK 3084</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="889" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-210
+        </label></td>
+        <td class="ng-binding">11 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Sangam Distributors
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84921/10.10.2017/SPS/TN18AE4890
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AE 4890</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="894" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-215
+        </label></td>
+        <td class="ng-binding">11 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Jain International
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84910/09.10.2017/SPS/TN01AD2334
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 20 AR 1462</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="895" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-216
+        </label></td>
+        <td class="ng-binding">11 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Jain International
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84910/09.10.2017/SPS/TN01AD2334
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AK 3084</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="896" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-217
+        </label></td>
+        <td class="ng-binding">11 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Cosmo Lightin
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84910/09.10.2017/SPS/TN01AD2334
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 19 H 2740</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="909" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-224
+        </label></td>
+        <td class="ng-binding">11 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 --><div id="myPopoverlist23" ng-if="bitem.consignee_list.length > 1" class="hide text_popover pull-right ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">Mandar Lites</li><!-- end ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">Mahaveer Electric Agencies</li><!-- end ngRepeat: citem in bitem.consignee_list -->
+	</ul>
+</div><!-- end ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 --><div id="myPopovernumber23" ng-if="bitem.lr_nos.length > 1" class="hide number_popover ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: litem in bitem.lr_nos --><li ng-repeat="litem in bitem.lr_nos" class="ng-binding ng-scope">84932/10.10.2017/SPS/TN01AK1678</li><!-- end ngRepeat: litem in bitem.lr_nos --><li ng-repeat="litem in bitem.lr_nos" class="ng-binding ng-scope">84933</li><!-- end ngRepeat: litem in bitem.lr_nos -->
+	</ul>
+</div><!-- end ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Mandar Lites
+        <!-- ngIf: bitem.consignee_list.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.consignee_list.length > 1"> 
+            
+            <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopoverlist23" data-placement="bottom" class="popover_test consignee_readyfor_billing ng-binding" data-original-title="" title=""> + 2 </a></span><!-- end ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84932/10.10.2017/SPS/TN01AK1678
+          <!-- ngIf: bitem.lr_nos.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.lr_nos.length > 1"> 
+              <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopovernumber23" data-placement="bottom" class="popover_test ng-binding" data-original-title="" title=""> + 2 </a></span><!-- end ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 01 AK 1672</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="888" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-209
+        </label></td>
+        <td class="ng-binding">10 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Midas Electricals Private Limited
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84919/10.10.2017/SPS/TN18M6921
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 M 6921</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="898" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-219
+        </label></td>
+        <td class="ng-binding">10 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Orient Elelctricals &amp;,Engineering (I) Pvt Ltd
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84934/10.10.2017/SPS/TN18O7809
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 O 7809</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="899" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-220
+        </label></td>
+        <td class="ng-binding">10 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Jain International
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84928/10.10.2017/SPS/TN18AE4980
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AE 4980</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="900" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-221
+        </label></td>
+        <td class="ng-binding">10 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">N.A.Traders
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84931
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 01 AD 2334</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="912" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-227
+        </label></td>
+        <td class="ng-binding">7 Oct 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Mymoon Enterprises
+        <!-- ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">84846/06.10.2017
+          <!-- ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 99 H 2740</td>
+        <td class="ng-binding">120 CFT</td>
+        <td><div class="right_side_text ng-binding">1020</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) --><tr ng-repeat="bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay))" bs-popover="" class="ng-scope">
+        <td>  <label class="custom-checkbox ng-binding"><input type="checkbox" ng-hide="gen_state != bitem.source_state &amp;&amp; gen_state !=''" ng-model="bitem.Selected" ng-checked="bitem.Selected" ng-change="optionToggled(bitem)" value="656" class="ng-pristine ng-untouched ng-valid">
+           <span class="checkbox"></span> PL-CHN-193
+        </label></td>
+        <td class="ng-binding">17 Aug 2017</td>
+        <td><span class="from_route ng-binding">Chennai</span> - <span class="to_route ng-binding">Chennai</span>
+        <!-- ngIf: bitem.drop_cities.length > 1 -->  
+          
+        
+        
+            
+<!-- ngIf: bitem.consignee_list.length > 1 --><div id="myPopoverlist29" ng-if="bitem.consignee_list.length > 1" class="hide text_popover pull-right ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">Sangam Distributors</li><!-- end ngRepeat: citem in bitem.consignee_list --><li ng-repeat="citem in bitem.consignee_list" class="ng-binding ng-scope">TRIPLEA ENTERPRISES</li><!-- end ngRepeat: citem in bitem.consignee_list -->
+	</ul>
+</div><!-- end ngIf: bitem.consignee_list.length > 1 -->
+  <!-- ngIf: bitem.lr_nos.length > 1 --><div id="myPopovernumber29" ng-if="bitem.lr_nos.length > 1" class="hide number_popover ng-scope">
+	<ul class="list-unstyled popover_list">
+            <!-- ngRepeat: litem in bitem.lr_nos --><li ng-repeat="litem in bitem.lr_nos" class="ng-binding ng-scope">83364</li><!-- end ngRepeat: litem in bitem.lr_nos --><li ng-repeat="litem in bitem.lr_nos" class="ng-binding ng-scope">83363</li><!-- end ngRepeat: litem in bitem.lr_nos -->
+	</ul>
+</div><!-- end ngIf: bitem.lr_nos.length > 1 -->
+  <!-- ngIf: bitem.drop_cities.length > 1 -->     
+            
+            
+            
+        </td>
+        <td class="ng-binding">Sangam Distributors
+        <!-- ngIf: bitem.consignee_list.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.consignee_list.length > 1"> 
+            
+            <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopoverlist29" data-placement="bottom" class="popover_test consignee_readyfor_billing ng-binding" data-original-title="" title=""> + 2 </a></span><!-- end ngIf: bitem.consignee_list.length > 1 -->  
+          
+         </td>
+        <td class="ng-binding">83364
+          <!-- ngIf: bitem.lr_nos.length > 1 --><span class="right_side popover_style ng-scope" ng-click="tool_show()" ng-if="bitem.lr_nos.length > 1"> 
+              <a href="javascript:void(0);" rel="popover" data-popover-content="#myPopovernumber29" data-placement="bottom" class="popover_test ng-binding" data-original-title="" title=""> + 2 </a></span><!-- end ngIf: bitem.lr_nos.length > 1 -->  
+          </td>
+        <td class="ng-binding">TN 18 AE 4890</td>
+        <td class="ng-binding">40 CFT</td>
+        <td><div class="right_side_text ng-binding">2796</div></td>
+      </tr><!-- end ngRepeat: bitem in  (filteredItems = (billing_list | dateRange : from_date : to_date | filter: search | limitTo:noToDisplay)) -->
+      
+    </tbody>
+   
+  </table>
+  </div>
+  </div></div>
+  
+  
+  
+  <div id="myPopoverlist" class="hide text_popover pull-right">
+	<ul class="list-unstyled popover_list">
+		<li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+         
+         <li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+         
+         <li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+         
+         <li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+         
+         <li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+         
+         <li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+         
+         <li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+         
+         <li>Orient Electrices</li>
+		<li>Teegee Agenies</li>
+		<li>Visva Marketing</li>
+        <li>Harsha Agenices</li>
+        <li> Canteen Stores Department</li> 
+         <li>Esemaar Agencies</li>
+	</ul>
+</div>
+  
+  
+  <div id="myPopovernumber" class="hide number_popover">
+	<ul class="list-unstyled popover_list">
+		<li>83219</li>
+		<li>83219</li>
+		<li>83219</li>
+        <li>83219</li>
+        <li>83219</li>
+		<li>83219</li>
+		<li>83219</li>
+        <li>83219</li>
+        <li>83219</li>
+		<li>83219</li>
+		<li>83219</li>
+        <li>83219</li>
+	</ul>
+</div>
+  
+   <footer>
+   <div class="col-lg-12 footer">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding btn_style">
+    <div class="pull-right">
+    <a href="#">
+    <button class="btn btn-success" type="button"><div class="btn_text">Generate Invoice</div></button></a>
+    </div>
+  </div>
+  </div>
+  </footer>
+    
+  
+</div>
+</div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/comman-script.js"></script>
+    
+    <!------Date Picker------------->
+	<script type="text/javascript" src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    
+  
+  </body>
+</html>
